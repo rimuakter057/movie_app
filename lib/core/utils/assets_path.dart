@@ -1,0 +1,17 @@
+
+class AssetsPath{
+  static const String baseUrl = 'assets/images';
+  ///home section
+  //images
+  static const String homeHeader="$baseUrl/home/home_header_image.png";
+  static const String textImage="$baseUrl/home/text_image.png";
+  static const String tvImage1="$baseUrl/home/tv_show_image1.png";
+  //icons
+  static const String microphoneIcon="$baseUrl/home/icons/microphone_icon.png";
+  static const String notificationIcon="assets/images/home/icons/notification_icon.png";
+  static const String searchIcon="$baseUrl/home/icons/search_icon.png";
+  static const String line="$baseUrl/home/icons/line.png";
+  static const String bookmarkIcon="assets/images/home/icons/bookmark_icon.png";
+  static const String downloadIcon="$baseUrl/home/icons/download_icon.png";
+  static const String shearIcon="$baseUrl/home/icons/shear_icon.png";
+}
