@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:movie_app/core/utils/app_colors.dart';
+
 import 'package:movie_app/core/utils/app_text_style.dart';
-import 'package:movie_app/presentation/views/home_section/social_sharing_button/widget/body_text_widget.dart';
-import 'package:movie_app/presentation/views/home_section/social_sharing_button/widget/header_container.dart';
-import 'package:movie_app/presentation/views/home_section/social_sharing_button/widget/hip_hop_row_widget.dart';
-import 'package:movie_app/presentation/views/home_section/social_sharing_button/widget/outline_container_widget.dart';
+import 'package:movie_app/presentation/views/home_section/social_sharing/widget/body_text_widget.dart';
+import 'package:movie_app/presentation/views/home_section/social_sharing/widget/header_container.dart';
+import 'package:movie_app/presentation/views/home_section/social_sharing/widget/hip_hop_row_widget.dart';
 import 'package:movie_app/presentation/widgets/assets_icon_image.dart';
 import 'package:movie_app/presentation/widgets/custom_shear_row.dart';
 
@@ -14,14 +12,14 @@ import 'package:movie_app/presentation/widgets/custom_shear_row.dart';
 import '../../../../core/utils/assets_path.dart';
 
 
-class SocialShearingButtonView extends StatefulWidget {
-  const SocialShearingButtonView({super.key});
+class SocialShearingView extends StatefulWidget {
+  const SocialShearingView({super.key});
 
   @override
-  State<SocialShearingButtonView> createState() => _SocialShearingButtonViewState();
+  State<SocialShearingView> createState() => _SocialShearingViewState();
 }
 
-class _SocialShearingButtonViewState extends State<SocialShearingButtonView> {
+class _SocialShearingViewState extends State<SocialShearingView> {
   @override
   Widget build(BuildContext context) {
      final Widget gap = SizedBox(height: 16.h);
@@ -44,7 +42,17 @@ class _SocialShearingButtonViewState extends State<SocialShearingButtonView> {
                   HipHopRow(),
                   gap,
                   ///shearing row
-                  CustomShearRow(),
+                  CustomShearRow(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        AssetsIconWidget(path: AssetsPath.playIcon, height: 16.67.h, width: 16.67.w),
+                        SizedBox(width: 8.w,),
+                        Text("Play",style: AppTextStyle.commonStyle,)
+                      ],
+                    ),
+                  ),
                  gap,
                  // Genre: Drama Music, Action text
                   Text("Genre: Drama Music, Action",style:

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/recommended_view.dart';
-import 'package:movie_app/presentation/views/home_section/social_sharing_button/social_shearing_button_view.dart';
+import 'package:movie_app/presentation/views/home_section/social_sharing/social_shearing_view.dart';
 
 void main(){
   runApp(MovieApp());
@@ -26,7 +26,7 @@ class MovieApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.black,
             textTheme: Typography.whiteCupertino,
           ),
-          home: const SocialShearingButtonView(),
+          home: const SocialShearingView(),
         );
       },
     );

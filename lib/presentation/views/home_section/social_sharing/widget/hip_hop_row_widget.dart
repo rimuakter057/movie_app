@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movie_app/presentation/views/home_section/social_sharing/widget/rating_widget.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_style.dart';
 import '../../../../../core/utils/assets_path.dart';
 import '../../../../widgets/assets_icon_image.dart';
+import 'custom_painter.dart';
 import 'outline_container_widget.dart';
 
 
@@ -19,7 +21,23 @@ class HipHopRow extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Row(children: [
-        AssetsIconWidget(path: AssetsPath.starIcon, height: 15.83.h, width: 16.67.w),
+        GestureDetector(
+            onTap: (){
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return Dialog(
+                    backgroundColor: Colors.transparent,
+                    insetPadding: const EdgeInsets.only(bottom: 20, left: 16, right: 16),
+                    child: CustomPaint(
+                      painter: CustomPaintWidget(borderColor: Colors.purple),
+                      child: RatingDialogWidget(), // তোমার মূল UI
+                    ),
+                  );
+                },
+              );
+            },
+            child: AssetsIconWidget(path: AssetsPath.starIcon, height: 15.83.h, width: 16.67.w)),
         gap,
         Text("9.8",style: AppTextStyle.commonStyle.copyWith(
             fontSize: 12.sp,
