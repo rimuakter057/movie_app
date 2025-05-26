@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_app/core/utils/assets_path.dart';
-import 'package:movie_app/presentation/views/home_section/home/widgets/companion_widget.dart';
-import 'package:movie_app/presentation/views/home_section/home/widgets/custom_color_container_widget.dart';
-import 'package:movie_app/presentation/views/home_section/home/widgets/first_list_view_widget.dart';
-
-import '../../../../core/utils/app_text_style.dart';
+import 'package:movie_app/presentation/views/home_section/home_recommended/widgets/companion_widget.dart';
+import 'package:movie_app/presentation/views/home_section/home_recommended/widgets/custom_color_container_widget.dart';
+import 'package:movie_app/presentation/views/home_section/home_recommended/widgets/first_list_view_widget.dart';
 import '../../../widgets/custom_list_view_widget.dart';
 import '../../../widgets/custom_search_bar.dart';
 import '../../../widgets/custom_shear_row.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+class RecommendedView extends StatefulWidget {
+  const RecommendedView({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<RecommendedView> createState() => _RecommendedViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _RecommendedViewState extends State<RecommendedView> {
   @override
   Widget build(BuildContext context) {
     final Widget gapSm = SizedBox(height: 8.h);
@@ -60,18 +58,18 @@ class _HomeViewState extends State<HomeView> {
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(
               children: [
-                gap,
+                gapLg,
                 ///first list view
                 SizedBox(
-                height: 48.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 6,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return ListViewItem(image: AssetsPath.homeHeader,borderRadius: 6.r,);
-                  },
-                ),
+                  height: 48.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 6,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return ListViewItem(image: AssetsPath.homeHeader,borderRadius: 6.r,);
+                    },
+                  ),
                 ),
                 gap,
                 ///color container
@@ -85,6 +83,14 @@ class _HomeViewState extends State<HomeView> {
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: Column(
                   children: [
+
+                    CustomListViewWidget(
+                      textView: "",
+                      titleText: 'Recommended for you',
+                      image: AssetsPath.homeHeader,
+                      text: "Hip Hop Road\nRedemption",),
+                    gap,
+                    CustomColorContainerWidget(),
                     CustomListViewWidget(
                       textView: "",
                       titleText: 'Streamly Original',
@@ -109,7 +115,7 @@ class _HomeViewState extends State<HomeView> {
                       titleText: 'Popular Comedy Shows',
                       image: AssetsPath.homeHeader,
                       text: "Hip Hop Road\nRedemption",),
-                     CustomListViewWidget(
+                    CustomListViewWidget(
                       titleText: 'Popular Animated Movies',
                       image: AssetsPath.homeHeader,
                       text: "Hip Hop Road\nRedemption",),
@@ -131,11 +137,3 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
-
-
-
-
-
-
-
-

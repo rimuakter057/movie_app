@@ -6,6 +6,7 @@ class AssetsPath{
   static const String homeHeader="$baseUrl/home/home_header_image.png";
   static const String textImage="$baseUrl/home/text_image.png";
   static const String tvImage1="$baseUrl/home/tv_show_image1.png";
+  static const String socialSharingImage="$baseUrl/home/social_sharing_image.png";
   //icons
   static const String microphoneIcon="$baseUrl/home/icons/microphone_icon.png";
   static const String notificationIcon="assets/images/home/icons/notification_icon.png";
@@ -14,4 +15,8 @@ class AssetsPath{
   static const String bookmarkIcon="assets/images/home/icons/bookmark_icon.png";
   static const String downloadIcon="$baseUrl/home/icons/download_icon.png";
   static const String shearIcon="$baseUrl/home/icons/shear_icon.png";
+  static const String arrowIcon="assets/images/home/icons/arrow_icon.png";
+  static const String categoriesIcon="$baseUrl/home/icons/categories_icons.png";
+  static const String starIcon="$baseUrl/home/icons/Star.png";
+
 }

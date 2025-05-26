@@ -14,4 +14,9 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     color: AppColors.white,
   );
+  static TextStyle bodyMediumStyle =GoogleFonts.inter(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+    color: AppColors.white,
+  );
 }

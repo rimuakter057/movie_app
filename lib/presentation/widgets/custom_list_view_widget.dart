@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_app/core/utils/app_colors.dart';
-
 import '../../core/utils/app_text_style.dart';
-import '../views/home_section/home/widgets/first_list_view_widget.dart';
+import '../views/home_section/home_recommended/widgets/first_list_view_widget.dart';
 
 class CustomListViewWidget extends StatelessWidget {
   const CustomListViewWidget({
