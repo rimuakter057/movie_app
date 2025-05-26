@@ -35,6 +35,7 @@ class AppColors {
   static const Color secondaryText = Color(0x99FFFFFF); // white with 60% opacity
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
+  static const Color red = Color(0xFFFB4A59);
   ///home section
   static const searchBackground = Color(0x66000000); // black with 40% opacity
   static const micBackground = Color(0x0D000000);

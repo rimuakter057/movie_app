@@ -28,4 +28,6 @@ class AssetsPath{
   static const String ticTokIcon="$baseUrl/home/icons/tit_tok_icon.png";
   static const String twitterIcon="$baseUrl/home/icons/twitter_icon.png";
   static const String whatsAppIcon="$baseUrl/home/icons/whatsapp_icon.png";
+  static const String dropIcon="$baseUrl/home/icons/drop_icon.png";
+
 }

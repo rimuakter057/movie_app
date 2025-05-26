@@ -19,7 +19,7 @@ class CustomCircleContainer extends StatelessWidget {
       width:width?? AppSizes.commonIconBackWidth,
       height:height?? AppSizes.commonHeight,
       decoration: BoxDecoration(
-        color:backgroundColor?? AppColors.searchBackground,
+        color:backgroundColor?? Color(0x407A24BC),
         borderRadius: BorderRadius.circular(100.r), // Full circle
       ),
       child:child?? Stack(

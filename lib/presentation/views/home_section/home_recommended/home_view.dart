@@ -20,9 +20,9 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    final Widget gapSm = SizedBox(height: 8.h);
+
     final Widget gap = SizedBox(height: 20.h);
-    final Widget gapLg = SizedBox(height: 25.h);
+
     return Scaffold(
       body: Column(
         children: [
