@@ -68,6 +68,8 @@ flutter:
   assets:
     - assets/images/home/
     - assets/images/home/icons/
+    - assets/images/live_stream/
+    - assets/images/live_stream/icons/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

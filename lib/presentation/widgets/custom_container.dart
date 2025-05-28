@@ -20,11 +20,11 @@ class CustomContainer extends StatelessWidget {
       height:height?? AppSizes.commonHeight,
       width:width?? AppSizes.searchBarWidthHm,
       decoration: BoxDecoration(
-        color:backgroundColor?? AppColors.searchBackground,
+        color:backgroundColor?? AppColors.primaryShade,
         borderRadius: BorderRadius.circular(borderRadius??AppSizes.commonRadius),
 
       ),
-      child: child,
+      child: Center(child: child),
     );
   }
 }

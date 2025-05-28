@@ -9,6 +9,7 @@ import '../../../../core/utils/app_text_style.dart';
 import '../../../widgets/custom_list_view_widget.dart';
 import '../../../widgets/custom_search_bar.dart';
 import '../../../widgets/custom_shear_row.dart';
+import '../../../widgets/image_container_widget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -27,34 +28,11 @@ class _HomeViewState extends State<HomeView> {
       body: Column(
         children: [
           ///header section
-          Container(
-            height: 420.h,
-            width: 393.w,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(AssetsPath.homeHeader),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: Stack(
-                children: [
-                  ///search section
-                  Positioned(top: 54.h, child: CustomSearchBar()),
-                  ///companion text
-                  Positioned(bottom: 80.h, child: CompanionWidget()),
-                  ///shear row
-                  Positioned(
-                    bottom: 10.h,
-                    left: 0,
-                    right: 0,
-                    child: CustomShearRow(),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          ImageContainer(
+              height: 420.h,
+              width: 393.w,
+              image: AssetsPath.homeHeader),
+
           ///fist listview item
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -69,7 +47,7 @@ class _HomeViewState extends State<HomeView> {
                   itemCount: 6,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return ListViewItem(image: AssetsPath.homeHeader,borderRadius: 6.r,);
+                    return ImageContainer(image: AssetsPath.homeHeader,borderRadius: 6.r,);
                   },
                 ),
                 ),

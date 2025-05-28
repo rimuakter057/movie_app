@@ -1,8 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movie_app/presentation/views/favorites_section/favorites_list/favorites_list_view.dart';
+import 'package:movie_app/presentation/views/home_section/home_recommended/home_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/recommended_view.dart';
 import 'package:movie_app/presentation/views/home_section/social_sharing/social_shearing_view.dart';
+import 'package:movie_app/presentation/views/library_section/contain_detail/content_details_view.dart';
+import 'package:movie_app/presentation/views/library_section/content_library/content_library_view.dart';
+import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_stream_three_view.dart';
 import 'package:movie_app/presentation/views/profile_section/download_storage_management/download_storage_management_view.dart';
 
 void main(){
@@ -27,7 +32,7 @@ class MovieApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.black,
             textTheme: Typography.whiteCupertino,
           ),
-          home: const DownloadStorageManagementView(),
+          home: const ContentDetailsView(),
         );
       },
     );

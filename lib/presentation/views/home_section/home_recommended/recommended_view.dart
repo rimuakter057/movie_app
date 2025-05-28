@@ -7,6 +7,7 @@ import 'package:movie_app/presentation/views/home_section/home_recommended/widge
 import '../../../widgets/custom_list_view_widget.dart';
 import '../../../widgets/custom_search_bar.dart';
 import '../../../widgets/custom_shear_row.dart';
+import '../../../widgets/image_container_widget.dart';
 
 class RecommendedView extends StatefulWidget {
   const RecommendedView({super.key});
@@ -67,7 +68,7 @@ class _RecommendedViewState extends State<RecommendedView> {
                     itemCount: 6,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      return ListViewItem(image: AssetsPath.homeHeader,borderRadius: 6.r,);
+                      return ImageContainer(image: AssetsPath.homeHeader,borderRadius: 6.r,);
                     },
                   ),
                 ),

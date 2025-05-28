@@ -46,7 +46,7 @@ class HipHopRow extends StatelessWidget {
         gap,
         Icon(Icons.arrow_forward_ios,color: AppColors.primary,size: 16.sp,),
         gap,
-        Text("2025",style: AppTextStyle.listViewStyle.copyWith(
+        Text("2025",style: AppTextStyle.bodyMediumStyle.copyWith(
           fontWeight: FontWeight.w600,
         ),),
         gap,

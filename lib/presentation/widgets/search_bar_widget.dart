@@ -22,6 +22,7 @@ class SearchBarWidget extends StatelessWidget {
 
     final Widget gapSm =SizedBox(width: 8.w,);
     return CustomContainer(
+   backgroundColor: AppColors.searchBackground,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.w),
         child: Row(

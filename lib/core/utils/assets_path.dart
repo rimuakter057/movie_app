@@ -30,4 +30,12 @@ class AssetsPath{
   static const String whatsAppIcon="$baseUrl/home/icons/whatsapp_icon.png";
   static const String dropIcon="$baseUrl/home/icons/drop_icon.png";
 
+
+  ///live stream section
+  //images
+  static const String liveImage1="$baseUrl/live_stream/live_image_1.png";
+//icons
+  static const String eyeIcon="$baseUrl/live_stream/icons/eye_icon.png";
+
+
 }

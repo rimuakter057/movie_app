@@ -29,12 +29,14 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const Color primary = Color(0xFF7A24BC);
   static const Color primaryShade = Color(0x26AD59F3);
+  static const Color primary15 = Color(0x407A24BC);
   static const Color primaryShade1 = Color(0xE67A24BC);
    static const Color primaryShade2 = Color(0x997A24BC);
 
   static const Color secondaryText = Color(0x99FFFFFF); // white with 60% opacity
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
+  static const Color black30 = Color(0x4D000000);
   static const Color red = Color(0xFFFB4A59);
   ///home section
   static const searchBackground = Color(0x66000000); // black with 40% opacity

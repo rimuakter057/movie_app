@@ -9,9 +9,9 @@ import 'custom_container_circle.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
-    super.key,
+    super.key, this.title,
   });
-
+final String?title;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
         CustomCircleContainer(
           child:    AssetsIconWidget(path: AssetsPath.arrowIcon, height: 24.h, width: 24.w),
         ),
-        Text("Profile",style: AppTextStyle.commonStyle.copyWith(
+        Text(title??"Profile",style: AppTextStyle.commonStyle.copyWith(
             fontSize: 20,
             fontWeight: FontWeight.w600
         ),),
