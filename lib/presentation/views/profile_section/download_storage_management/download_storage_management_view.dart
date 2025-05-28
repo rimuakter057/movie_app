@@ -34,96 +34,96 @@ class _DownloadStorageManagementViewState
           Padding(padding: EdgeInsets.all(20.h), child: CustomAppBar()),
 
           ///indicator
-          Container(
-            height: 340.h,
-            width: double.infinity,
-            color: AppColors.primaryShade,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                CircularPercentIndicator(
-                  radius: 60.0,
-                  lineWidth: 5.0,
-                  percent: 1.0,
-                  center: Text("100%"),
-                  progressColor: AppColors.primary,
-                ),
-
-                ///storage container
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.h),
-                  child: Column(
-                    children: [SizedBox(height: 24.h), StorageWidget()],
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          ///text
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.h),
-            child: Column(
-              children: [
-                SizedBox(height: 24.h),
-                DownloadedTextWidget(),
-                SizedBox(height: 24.h),
-              ],
-            ),
-          ),
-
-          ///downloaded items
-          Expanded(
-            child: SizedBox(
-              height: 358.h,
-              child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.h),
-                    //DownloadedItem
-                    child: DownloadedItemWidget(),
-                  );
-                },
-              ),
-            ),
-          ),
-          ///text section
           Expanded(
             child: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Easy Download", style: AppTextStyle.commonStyle),
-                    Text(
-                      "Save time with bulk actions—clear all downloads at once or auto-delete old content when storage is low. Manage space with ease.",
-                      style: AppTextStyle.bodyMediumStyle,
-                    ),
-                    ListTileWidget(title:"Cloud Sync",
-                      subtitle:  "*When Low on Space",
-                      trailing:  Icon(Icons.switch_account_outlined),),
-                    ListTileWidget(title: "Auto-Delete",
-                      subtitle:"*Movies backed up",
-                      trailing:  Icon(Icons.switch_account_outlined),),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
+                children: [
+                  Container(
+                    height: 340.h,
+                    width: double.infinity,
+                    color: AppColors.primaryShade,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          "Clear All Downloads",
-                          style: AppTextStyle.commonStyle,
+                        CircularPercentIndicator(
+                          radius: 60.0,
+                          lineWidth: 5.0,
+                          percent: 1.0,
+                          center: Text("100%"),
+                          progressColor: AppColors.primary,
                         ),
-                        OutlineContainerWidget(
-                          height: 44.h,
-                          width: 149.w,
-                          text: "Bulk Delete",
-                          color: AppColors.primary,
+
+                        ///storage container
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.h),
+                          child: Column(
+                            children: [SizedBox(height: 24.h), StorageWidget()],
+                          ),
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                  ///text
+                  Padding(
+                    padding:  EdgeInsets.symmetric(horizontal: 20.w),
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            SizedBox(height: 24.h),
+                            DownloadedTextWidget(),
+                            SizedBox(height: 24.h),
+                          ],
+                        ),
+
+                        ///downloaded items
+                        SizedBox(
+                          height: 358.h,
+                          child: ListView.builder(
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemCount: 10,
+                            itemBuilder: (context, index) {
+                              return DownloadedItemWidget();
+                            },
+                          ),
+                        ),
+                        ///text section
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Easy Download", style: AppTextStyle.commonStyle),
+                            Text(
+                              "Save time with bulk actions—clear all downloads at once or auto-delete old content when storage is low. Manage space with ease.",
+                              style: AppTextStyle.bodyMediumStyle,
+                            ),
+                            ListTileWidget(title:"Cloud Sync",
+                              subtitle:  "*When Low on Space",
+                              trailing:  Icon(Icons.switch_account_outlined),),
+                            ListTileWidget(title: "Auto-Delete",
+                              subtitle:"*Movies backed up",
+                              trailing:  Icon(Icons.switch_account_outlined),),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Clear All Downloads",
+                                  style: AppTextStyle.commonStyle,
+                                ),
+                                OutlineContainerWidget(
+                                  height: 44.h,
+                                  width: 149.w,
+                                  text: "Bulk Delete",
+                                  color: AppColors.primary,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

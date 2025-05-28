@@ -24,56 +24,63 @@ class _SocialShearingViewState extends State<SocialShearingView> {
   Widget build(BuildContext context) {
      final Widget gap = SizedBox(height: 16.h);
     return Scaffold(
-      body: Column(
-        children: [
-          ///header container
-          HeaderContainer(),
-          SizedBox(height: 24.h,),
-          SingleChildScrollView(
-            child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 20.w),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Hip Hop Road Redemption",
-                    style: AppTextStyle.commonStyle.copyWith(fontSize: 22),),
-                  gap,
-                  ///hip hop  details row
-                  HipHopRow(),
-                  gap,
-                  ///shearing row
-                  CustomShearRow(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        AssetsIconWidget(path: AssetsPath.playIcon, height: 16.67.h, width: 16.67.w),
-                        SizedBox(width: 8.w,),
-                        Text("Play",style: AppTextStyle.commonStyle,)
-                      ],
-                    ),
-                  ),
-                 gap,
-                 // Genre: Drama Music, Action text
-                  Text("Genre: Drama Music, Action",style:
-                  AppTextStyle.bodyMediumStyle.copyWith(fontWeight: FontWeight.w300)
-                  ),
-                  gap,
-                  //Synopsis text
-                  Text("Synopsis",style:
-                  AppTextStyle.bodyMediumStyle.copyWith(fontWeight: FontWeight.w600,
-                  fontSize: 16.sp
-                  )
-                  ),
-                  gap,
-                  ///body text
-                  ExpandableTextWidget(),
-                ],
-              ),
-            ),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Container(
+          width: double.infinity,
+          constraints: BoxConstraints(
+            minHeight: MediaQuery.of(context).size.height,
           ),
+          child: Column(
+            children: [
+              ///header container
+              HeaderContainer(),
+              SizedBox(height: 24.h,),
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 20.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Hip Hop Road Redemption",
+                      style: AppTextStyle.commonStyle.copyWith(fontSize: 22),),
+                    gap,
+                    ///hip hop  details row
+                    HipHopRow(),
+                    gap,
+                    ///shearing row
+                    CustomShearRow(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          AssetsIconWidget(path: AssetsPath.playIcon, height: 16.67.h, width: 16.67.w),
+                          SizedBox(width: 8.w,),
+                          Text("Play",style: AppTextStyle.commonStyle,)
+                        ],
+                      ),
+                    ),
+                   gap,
 
-        ],
+                    Text("Genre: Drama Music, Action",style:
+                    AppTextStyle.bodyMediumStyle.copyWith(fontWeight: FontWeight.w300)
+                    ),
+                    gap,
+                    //Synopsis text
+                    Text("Synopsis",style:
+                    AppTextStyle.bodyMediumStyle.copyWith(fontWeight: FontWeight.w600,
+                    fontSize: 16.sp
+                    )
+                    ),
+                    gap,
+                    ///body text
+                    ExpandableTextWidget(),
+                  ],
+                ),
+              ),
+
+            ],
+          ),
+        ),
       ),
     );
   }
