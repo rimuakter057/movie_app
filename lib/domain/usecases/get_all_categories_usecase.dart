@@ -1,6 +1,6 @@
 
 
-import '../entities/category_entites.dart';
+import '../entities/category_entities.dart';
 import '../repositories/category_repository.dart';
 
 class GetAllCategoriesUseCase {

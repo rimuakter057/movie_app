@@ -1,6 +1,8 @@
 
 
-import '../../domain/entities/category_entites.dart';
+
+
+import '../../domain/entities/category_entities.dart';
 
 class CategoryModel extends CategoryEntity {
   const CategoryModel({required String id, required String name})

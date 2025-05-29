@@ -37,7 +37,7 @@ class MovieApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.black,
             textTheme: Typography.whiteCupertino,
           ),
-          home:  LiveShortsView(),
+          home:  MainBottomNavView(),
         );
       },
     );

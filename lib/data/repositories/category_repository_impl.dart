@@ -1,5 +1,5 @@
 
-import '../../domain/entities/category_entites.dart';
+import '../../domain/entities/category_entities.dart';
 import '../../domain/repositories/category_repository.dart';
 import '../datasources/category_local_datasource.dart';
 
