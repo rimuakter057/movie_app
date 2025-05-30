@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:movie_app/presentation/binding/bunding.dart';
+import 'package:movie_app/presentation/binding/download_storage_binding.dart';
 import 'package:movie_app/presentation/views/favorites_section/favorites_list/favorites_list_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/home_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/recommended_view.dart';
@@ -41,8 +42,8 @@ class MovieApp extends StatelessWidget {
             textTheme: Typography.whiteCupertino,
           ),
 
-          initialBinding: CategoryBinding(),
-          home: const CategoryListView(),
+          initialBinding: DownloadStorageBinding(),
+          home: const DownloadStorageManagementView(),
         );
       },
     );

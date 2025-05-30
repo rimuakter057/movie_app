@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
 import 'package:movie_app/core/utils/app_colors.dart';
+import 'package:movie_app/domain/entities/download_storage_entities.dart';
+import 'package:movie_app/presentation/controller/download_storage_controller.dart';
 import 'package:movie_app/presentation/widgets/assets_icon_image.dart';
 import 'package:movie_app/presentation/widgets/custom_container.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -26,6 +30,7 @@ class _DownloadStorageManagementViewState
     extends State<DownloadStorageManagementView> {
   @override
   Widget build(BuildContext context) {
+    final controller= Get.find<DownloadStorageController>();
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
@@ -57,7 +62,11 @@ class _DownloadStorageManagementViewState
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20.h),
                           child: Column(
-                            children: [SizedBox(height: 24.h), StorageWidget()],
+                            children: [SizedBox(height: 24.h),
+                              StorageWidget(
+
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -77,16 +86,35 @@ class _DownloadStorageManagementViewState
                         ),
 
                         ///downloaded items
-                        SizedBox(
-                          height: 358.h,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            itemCount: 10,
-                            itemBuilder: (context, index) {
-                              return DownloadedItemWidget();
-                            },
-                          ),
+                        FutureBuilder<List<DownloadStorageEntity>>(
+                          future: controller.getDownloadStorageFuture(),
+                          builder: (BuildContext context, snapshot) {
+                            if(snapshot.connectionState==ConnectionState.waiting){
+                              return const Center(child: CircularProgressIndicator(),);
+                            }else if(snapshot.hasError){
+                              return Center(child: Text("Error: ${snapshot.error}"));
+                            }else if(!snapshot.hasData || snapshot.data!.isEmpty){
+                              return const Center(child: Text("No categories found"));
+                            }
+                            else{
+                              final downloadedItems=snapshot.data!;
+                              return ListView.builder(
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                itemCount: downloadedItems.length,
+                                itemBuilder: (context, index) {
+                                  return DownloadedItemWidget(
+                                    title: downloadedItems[index].title,
+                                    subtitle: downloadedItems[index].subtitle,
+                                    image: AssetsPath.tvImage1,
+                                    dataSize: downloadedItems[index].dataSize,
+
+                                  );
+                                },
+                              );
+                            }
+
+                          },
                         ),
                         ///text section
                         Column(
@@ -133,4 +161,33 @@ class _DownloadStorageManagementViewState
   }
 }
 
+//
 
+//
+// return Scaffold(
+// appBar: AppBar(title: const Text("Category List")),
+// body: FutureBuilder<List<CategoryEntity>>(
+// future: controller.getCategoriesFuture(),
+// builder: (context, snapshot) {
+// if (snapshot.connectionState == ConnectionState.waiting) {
+// return const Center(child: CircularProgressIndicator());
+// } else if (snapshot.hasError) {
+// return Center(child: Text("Error: ${snapshot.error}"));
+// } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+// return const Center(child: Text("No categories found"));
+// } else {
+// final categories = snapshot.data!;
+// return ListView.builder(
+// itemCount: categories.length,
+// itemBuilder: (context, index) {
+// final category = categories[index];
+// return ListTile(
+// title: Text(category.name),
+// leading: CircleAvatar(child: Text(category.id)),
+// );
+// },
+// );
+// }
+// },
+// ),
+// );

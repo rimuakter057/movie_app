@@ -10,6 +10,7 @@ import '../../../widgets/custom_container.dart';
 class StorageWidget extends StatelessWidget {
   const StorageWidget({
     super.key,
+
   });
 
   @override

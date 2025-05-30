@@ -11,25 +11,30 @@ import '../../home_section/social_sharing/widget/outline_container_widget.dart';
 
 class DownloadedItemWidget extends StatelessWidget {
   const DownloadedItemWidget({
-    super.key,
+    super.key, required this.title, required this.subtitle, required this.image, required this.dataSize,
   });
+  final String title;
+  final String subtitle;
+  final String image;
+  final String dataSize;
+
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: EdgeInsets.zero,
-      leading:ImageContainer(image: AssetsPath.tvImage1),
-      title: Text("Lightyear",style: AppTextStyle.commonStyle.copyWith(
+      leading:ImageContainer(image: image),
+      title: Text(title,style: AppTextStyle.commonStyle.copyWith(
           fontSize: 14.sp
       ),),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Jan 13th",style: AppTextStyle.bodyMediumStyle.copyWith(fontSize: 12.sp,color: Color(0xFFE0E0E0)),),
+          Text(subtitle,style: AppTextStyle.bodyMediumStyle.copyWith(fontSize: 12.sp,color: Color(0xFFE0E0E0)),),
           CustomContainer(
             height: 24.h,
             width: 56.w,
-            child: Text("1.2 GB",style: AppTextStyle.bodyMediumStyle.copyWith(fontSize: 12.sp),),
+            child: Text(dataSize,style: AppTextStyle.bodyMediumStyle.copyWith(fontSize: 12.sp),),
           ),
 
         ],
