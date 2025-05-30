@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:movie_app/presentation/binding/bunding.dart';
 import 'package:movie_app/presentation/views/favorites_section/favorites_list/favorites_list_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/home_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/recommended_view.dart';
@@ -9,6 +11,7 @@ import 'package:movie_app/presentation/views/library_section/contain_detail/cont
 import 'package:movie_app/presentation/views/library_section/content_library/content_library_view.dart';
 import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_stream_three_view.dart';
 import 'package:movie_app/presentation/views/main_bottom_nav/main_bottom_nav_view.dart';
+import 'package:movie_app/presentation/views/practice/categiry_page.dart';
 import 'package:movie_app/presentation/views/practice/category_screem.dart';
 import 'package:movie_app/presentation/views/practice/live_short.dart';
 import 'package:movie_app/presentation/views/profile_section/download_storage_management/download_storage_management_view.dart';
@@ -30,14 +33,16 @@ class MovieApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Movie App',
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.black,
             textTheme: Typography.whiteCupertino,
           ),
-          home:  MainBottomNavView(),
+
+          initialBinding: CategoryBinding(),
+          home: const CategoryListView(),
         );
       },
     );
