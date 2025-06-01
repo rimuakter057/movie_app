@@ -14,7 +14,7 @@ import '../../../../core/utils/assets_path.dart';
 
 class SocialShearingView extends StatefulWidget {
   const SocialShearingView({super.key});
-
+static const routeName = '/social_sharing';
   @override
   State<SocialShearingView> createState() => _SocialShearingViewState();
 }

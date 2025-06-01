@@ -13,7 +13,7 @@ import '../../../widgets/image_container_widget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
-
+ static String routeName = '/home';
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -41,15 +41,15 @@ class _HomeViewState extends State<HomeView> {
                 gap,
                 ///first list view
                 SizedBox(
-                height: 48.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 6,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return ImageContainer(image: AssetsPath.homeHeader,borderRadius: 6.r,);
-                  },
-                ),
+                  height: 48.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 6,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return ImageContainer(image: AssetsPath.homeHeader,borderRadius: 6.r,);
+                    },
+                  ),
                 ),
                 gap,
                 ///color container
@@ -88,7 +88,7 @@ class _HomeViewState extends State<HomeView> {
                       titleText: 'Popular Comedy Shows',
                       image: AssetsPath.homeHeader,
                       text: "Hip Hop Road\nRedemption",),
-                     CustomListViewWidget(
+                    CustomListViewWidget(
                       titleText: 'Popular Animated Movies',
                       image: AssetsPath.homeHeader,
                       text: "Hip Hop Road\nRedemption",),
@@ -110,11 +110,3 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
-
-
-
-
-
-
-
-

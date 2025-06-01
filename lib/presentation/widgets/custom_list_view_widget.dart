@@ -8,7 +8,11 @@ import 'image_container_widget.dart';
 
 class CustomListViewWidget extends StatelessWidget {
   const CustomListViewWidget({
-    super.key, required this.titleText, required this.image, required this.text, this.height, this.width, this.sizeBoxHeight, this.textView,
+    super.key, required this.titleText,
+    required this.image, required this.text,
+    this.height, this.width, this.sizeBoxHeight,
+    this.textView,
+    this.itemCount,
 
   });
 
@@ -19,7 +23,7 @@ class CustomListViewWidget extends StatelessWidget {
  final double ?height;
  final double ? width;
   final double ?sizeBoxHeight;
-
+final int ?itemCount;
   @override
   Widget build(BuildContext context) {
     final Widget gapSm = SizedBox(height: 4.h);
@@ -35,7 +39,7 @@ class CustomListViewWidget extends StatelessWidget {
           height:sizeBoxHeight??268.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 6,
+            itemCount:itemCount?? 10,
             shrinkWrap: true,
             itemBuilder: (context, index) {
               return Column(

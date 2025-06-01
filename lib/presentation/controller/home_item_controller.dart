@@ -4,26 +4,24 @@ import '../../domain/entities/home_item_entity.dart';
 import '../../domain/usecases/home_data_usecase.dart';
 
 class HomeController extends GetxController {
-  final GetHomeDataUseCase useCase;
+  final GetHomeDataUseCase getHomeDataUseCase;
+  HomeController(this.getHomeDataUseCase);
 
-  List<HomeItemEntity> imageOnly = [];
-  List<HomeItemEntity> imageTitle = [];
-  List<HomeItemEntity> imageTitleSubtitle = [];
 
-  HomeController(this.useCase);
-
-  @override
-  void onInit() {
-    super.onInit();
-    loadData();
+  Future<Map<String, List<HomeItemEntity>>> getHomeItemsFuture() async {
+    await Future.delayed(Duration(seconds: 1));
+    return getHomeDataUseCase.execute();
   }
 
-  Future<void> loadData() async {
-    final data = await useCase.execute();
-    imageOnly = data['homeImage'] ?? [];
-    imageTitle = data['homeImageTitle'] ?? [];
-    imageTitleSubtitle = data['homeImageSubTitle'] ?? [];
-
-    update();
-  }
 }
+
+// class CategoryController extends GetxController {
+//   final GetAllCategoriesUseCase getAllCategoriesUseCase;
+//
+//   CategoryController(this.getAllCategoriesUseCase);
+//
+//   Future<List<CategoryEntity>> getCategoriesFuture() async {
+//     await Future.delayed(Duration(seconds: 1)); // delay simulate
+//     return getAllCategoriesUseCase.execute();
+//   }
+// }

@@ -20,7 +20,7 @@ import '../widgets/storage_widget.dart';
 
 class DownloadStorageManagementView extends StatefulWidget {
   const DownloadStorageManagementView({super.key});
-
+    static const routeName = '/download-storage-management';
   @override
   State<DownloadStorageManagementView> createState() =>
       _DownloadStorageManagementViewState();
@@ -28,9 +28,22 @@ class DownloadStorageManagementView extends StatefulWidget {
 
 class _DownloadStorageManagementViewState
     extends State<DownloadStorageManagementView> {
+  final controller= Get.find<DownloadStorageController>();
+  @override
+  void initState() {
+    super.initState();
+   final controller = Get.find<DownloadStorageController>();
+
+    // এখন controller দিয়ে ডেটা লোড করো
+    controller.getDownloadStorageFuture().then((data) {
+      // চাইলে setState করে UI update করতে পারো
+      print("Download storage loaded: $data");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final controller= Get.find<DownloadStorageController>();
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(

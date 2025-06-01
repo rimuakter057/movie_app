@@ -9,28 +9,37 @@ import '../../data/datasources/download_storage_datasource.dart';
 import '../../data/repositories/download_storage_impl.dart';
 import '../../domain/usecases/download_storage_usecase.dart';
 import '../controller/download_storage_controller.dart';
+//
+// class DownloadStorageBinding extends Bindings {
+//   @override
+//   void dependencies() {
+// final localDataSource=DownloadStorageDatasource();
+// // Repository
+// Get.lazyPut<DownloadStorageRepository>(() => DownloadStorageImpl(Get.find()));
+//
+// //final repository=DownloadStorageImpl(localDataSource);
+// final useCase=GetAllDownloadStorageUseCase(repository);
+//
+// Get.lazyPut<DownloadStorageController>(() => DownloadStorageController(useCase));
+//   }
+//
+// }
+//
+
 
 class DownloadStorageBinding extends Bindings {
   @override
   void dependencies() {
-final localDataSource=DownloadStorageDatasource();
-final repository=DownloadStorageImpl(localDataSource);
-final useCase=GetAllDownloadStorageUseCase(repository);
+    // DataSource
+    Get.lazyPut(() => DownloadStorageDatasource());
 
-Get.lazyPut<DownloadStorageController>(() => DownloadStorageController(useCase));
+    // Repository
+    Get.lazyPut<DownloadStorageRepository>(() => DownloadStorageImpl(Get.find()));
+
+    // UseCase
+    Get.lazyPut(() => GetAllDownloadStorageUseCase(Get.find()));
+
+    // Controller
+    Get.lazyPut(() => DownloadStorageController(Get.find()));
   }
-
 }
-
-
-
-// class CategoryBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     final localDataSource = CategoryLocalDataSource();
-//     final repository = CategoryRepositoryImpl(localDataSource);
-//     final useCase = GetAllCategoriesUseCase(repository);
-//
-//     Get.lazyPut<CategoryController>(() => CategoryController(useCase));
-//   }
-// }

@@ -19,6 +19,16 @@ class GetHomeDataUseCase {
   }
 }
 
+//
+// class GetAllCategoriesUseCase {
+//   final CategoryRepository repository;
+//
+//   GetAllCategoriesUseCase(this.repository);
+//
+//   List<CategoryEntity> execute() {
+//     return repository.getAllCategories();
+//   }
+// }
 
 
 

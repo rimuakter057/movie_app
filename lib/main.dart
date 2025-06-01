@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:movie_app/presentation/binding/bunding.dart';
 import 'package:movie_app/presentation/binding/download_storage_binding.dart';
+import 'package:movie_app/presentation/binding/home_item_binding.dart';
+import 'package:movie_app/presentation/routes/app_routes.dart';
 import 'package:movie_app/presentation/views/favorites_section/favorites_list/favorites_list_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/home_view.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/recommended_view.dart';
@@ -12,6 +14,7 @@ import 'package:movie_app/presentation/views/library_section/contain_detail/cont
 import 'package:movie_app/presentation/views/library_section/content_library/content_library_view.dart';
 import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_stream_three_view.dart';
 import 'package:movie_app/presentation/views/main_bottom_nav/main_bottom_nav_view.dart';
+import 'package:movie_app/presentation/views/practice/home_item_view.dart';
 
 
 void main(){
@@ -35,8 +38,9 @@ class MovieApp extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.black,
           ),
-         // initialBinding: DownloadStorageBinding(),
-          home: const MainBottomNavView(),
+
+          initialRoute: MainBottomNavView.routeName,
+          getPages: Routes.routes,
         );
       },
     );

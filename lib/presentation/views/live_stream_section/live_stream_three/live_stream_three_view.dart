@@ -12,7 +12,7 @@ import '../../../../core/utils/assets_path.dart';
 
 class LiveStreamThreeView extends StatefulWidget {
   const LiveStreamThreeView({super.key});
-
+static String routeName = "/live_stream_three_view";
   @override
   State<LiveStreamThreeView> createState() => _LiveStreamThreeViewState();
 }

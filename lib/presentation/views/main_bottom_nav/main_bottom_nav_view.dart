@@ -9,7 +9,7 @@ import 'package:movie_app/presentation/views/profile_section/download_storage_ma
 
 class MainBottomNavView extends StatefulWidget {
   const MainBottomNavView({super.key});
-
+static const routeName = '/main_bottom_nav';
   @override
   State<MainBottomNavView> createState() => _MainBottomNavViewState();
 }

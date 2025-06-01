@@ -19,7 +19,7 @@ import '../../../widgets/profile_row_widget.dart';
 
 class FavoritesListView extends StatefulWidget {
   const FavoritesListView({super.key});
-
+static const String routeName = "/favorites_list_view";
   @override
   State<FavoritesListView> createState() => _FavoritesListViewState();
 }

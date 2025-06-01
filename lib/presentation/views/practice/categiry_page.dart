@@ -12,6 +12,7 @@ class CategoryListView extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<CategoryController>();
 
+
     return Scaffold(
       appBar: AppBar(title: const Text("Category List")),
       body: FutureBuilder<List<CategoryEntity>>(
