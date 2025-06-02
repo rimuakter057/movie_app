@@ -15,6 +15,7 @@ import 'package:movie_app/presentation/views/library_section/content_library/con
 import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_stream_three_view.dart';
 import 'package:movie_app/presentation/views/main_bottom_nav/main_bottom_nav_view.dart';
 import 'package:movie_app/presentation/views/practice/home_item_view.dart';
+import 'package:movie_app/presentation/views/profile_section/download_storage_management/download_storage_management_view.dart';
 
 
 void main(){
@@ -39,7 +40,7 @@ class MovieApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.black,
           ),
 
-          initialRoute: MainBottomNavView.routeName,
+          initialRoute: DownloadStorageManagementView.routeName,
           getPages: Routes.routes,
         );
       },
