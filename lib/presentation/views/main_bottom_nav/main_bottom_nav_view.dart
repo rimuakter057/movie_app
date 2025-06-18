@@ -7,6 +7,9 @@ import 'package:movie_app/presentation/views/home_section/social_sharing/social_
 import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_stream_three_view.dart';
 import 'package:movie_app/presentation/views/profile_section/download_storage_management/download_storage_management_view.dart';
 
+import '../../binding/download_storage_binding.dart';
+import '../library_section/contain_detail/content_details_view.dart';
+
 class MainBottomNavView extends StatefulWidget {
   const MainBottomNavView({super.key});
 static const routeName = '/main_bottom_nav';
@@ -16,11 +19,15 @@ static const routeName = '/main_bottom_nav';
 
 class _MainBottomNavViewState extends State<MainBottomNavView> {
   int _selectedIndex = 0;
-
+  @override
+  void initState() {
+    super.initState();
+    DownloadStorageBinding().dependencies();
+  }
   final List<Widget> _pages = [
     HomeView(),
     LiveStreamThreeView(),
-    SocialShearingView(),
+    ContentDetailsView(),
     FavoritesListView(),
     DownloadStorageManagementView(),
 

@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 import 'package:movie_app/presentation/binding/download_storage_binding.dart';
 import 'package:movie_app/presentation/views/home_section/home_recommended/home_view.dart';
+import 'package:movie_app/presentation/views/library_section/contain_detail/content_details_view.dart';
 import 'package:movie_app/presentation/views/main_bottom_nav/main_bottom_nav_view.dart';
 import '../binding/home_item_binding.dart';
 import '../views/favorites_section/favorites_list/favorites_list_view.dart';
@@ -43,6 +44,11 @@ class Routes {
     GetPage(
       name: FavoritesListView.routeName,
       page: ()=>FavoritesListView(),
+
+    ),
+    GetPage(
+      name: ContentDetailsView.routeName,
+      page: () => ContentDetailsView(),
 
     ),
   ];

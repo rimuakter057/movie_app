@@ -2,19 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:movie_app/presentation/binding/bunding.dart';
-import 'package:movie_app/presentation/binding/download_storage_binding.dart';
-import 'package:movie_app/presentation/binding/home_item_binding.dart';
 import 'package:movie_app/presentation/routes/app_routes.dart';
-import 'package:movie_app/presentation/views/favorites_section/favorites_list/favorites_list_view.dart';
-import 'package:movie_app/presentation/views/home_section/home_recommended/home_view.dart';
-import 'package:movie_app/presentation/views/home_section/home_recommended/recommended_view.dart';
-import 'package:movie_app/presentation/views/home_section/social_sharing/social_shearing_view.dart';
 import 'package:movie_app/presentation/views/library_section/contain_detail/content_details_view.dart';
-import 'package:movie_app/presentation/views/library_section/content_library/content_library_view.dart';
-import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_stream_three_view.dart';
+
+import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/live_short_view.dart';
 import 'package:movie_app/presentation/views/main_bottom_nav/main_bottom_nav_view.dart';
-import 'package:movie_app/presentation/views/practice/home_item_view.dart';
 import 'package:movie_app/presentation/views/profile_section/download_storage_management/download_storage_management_view.dart';
 
 
@@ -39,9 +31,9 @@ class MovieApp extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.black,
           ),
-
-          initialRoute: DownloadStorageManagementView.routeName,
+          initialRoute: MainBottomNavView.routeName,
           getPages: Routes.routes,
+          //home: (),
         );
       },
     );

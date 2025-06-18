@@ -22,7 +22,7 @@ import '../content_library/content_library_view.dart';
 
 class ContentDetailsView extends StatefulWidget {
   const ContentDetailsView({super.key});
-
+  static const routeName = '/content-details';
   @override
   State<ContentDetailsView> createState() => _ContentDetailsViewState();
 }
@@ -49,7 +49,6 @@ class _ContentDetailsViewState extends State<ContentDetailsView> {
                       style: AppTextStyle.commonStyle.copyWith(fontSize: 22),
                     ),
                     gap,
-
                     ///hip hop  details row
                     HipHopRow(),
                     gap,

@@ -40,7 +40,7 @@ class _RecommendedViewState extends State<RecommendedView> {
               child: Stack(
                 children: [
                   ///search section
-                  Positioned(top: 54.h, child: CustomSearchBar()),
+                  Positioned(top: 54.h, child: CustomSearchBarWidget()),
                   ///companion text
                   Positioned(bottom: 80.h, child: CompanionWidget()),
                   ///shear row

@@ -9,7 +9,7 @@ class DownloadStorageController extends GetxController{
   DownloadStorageController(this.getAllDownloadStorageUseCase);
 
   Future <List<DownloadStorageEntity>> getDownloadStorageFuture()async{
-    await Future.delayed(Duration(seconds: 1)); // delay simulate
+ // delay simulate
     return getAllDownloadStorageUseCase.execute();
   }
 }

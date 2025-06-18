@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:movie_app/core/utils/app_colors.dart';
 import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/widgets/live_video_item_widget.dart';
 
@@ -8,6 +9,7 @@ import 'package:movie_app/presentation/widgets/custom_search_bar.dart';
 
 import '../../../../core/utils/app_text_style.dart';
 import '../../../../core/utils/assets_path.dart';
+import 'live_short_view.dart';
 
 
 class LiveStreamThreeView extends StatefulWidget {
@@ -30,7 +32,7 @@ class _LiveStreamThreeViewState extends State<LiveStreamThreeView> {
           ),
           child: Column(
             children: [
-              CustomSearchBar(),
+              CustomSearchBarWidget(),
               gap,
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -85,12 +87,17 @@ class _LiveStreamThreeViewState extends State<LiveStreamThreeView> {
                            crossAxisSpacing: 4.w,
                           ) ,
                           itemBuilder: (context,index){
-                            return FittedBox(
-                              child: GridLiveVideoItemWidget(
-                                image:AssetsPath.liveImage1,
-                                countSee: '1M',
-                                profileTitle: 'Bradley Lawlor',
-                                profileSubTitle: '10k Followers',
+                            return InkWell(
+                              onTap: (){
+                             Get.to(LiveShortsView());
+                              },
+                              child: FittedBox(
+                                child: GridLiveVideoItemWidget(
+                                  image:AssetsPath.liveImage1,
+                                  countSee: '1M',
+                                  profileTitle: 'Bradley Lawlor',
+                                  profileSubTitle: '10k Followers',
+                                ),
                               ),
                             );
                           }),

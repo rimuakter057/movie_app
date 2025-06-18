@@ -34,9 +34,9 @@ class _DownloadStorageManagementViewState
     super.initState();
    final controller = Get.find<DownloadStorageController>();
 
-    // এখন controller দিয়ে ডেটা লোড করো
+
     controller.getDownloadStorageFuture().then((data) {
-      // চাইলে setState করে UI update করতে পারো
+
       print("Download storage loaded: $data");
     });
   }

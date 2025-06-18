@@ -4,8 +4,8 @@ import 'package:movie_app/presentation/widgets/search_bar_widget.dart';
 
 import 'custom_container_circle.dart';
 
-class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({
+class CustomSearchBarWidget extends StatelessWidget {
+  const CustomSearchBarWidget({
     super.key,
 
   });
