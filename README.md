@@ -12,8 +12,8 @@
 <p float="left">
  <img src="assets/screenshots/lubrary.jfif" width="200"/>
   <img src="assets/screenshots/library1.jfif" width="200"/>
+  <img src="assets/screenshots/rating.jfif" width="200"/>
   <img src="assets/screenshots/favorites.jfif" width="200"/>
- <img src="assets/screenshots/rating.jfif" width="200"/>
 </p>
 <p float="left">
  <img src="assets/screenshots/profile.jfif" width="200"/>
