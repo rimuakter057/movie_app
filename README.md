@@ -7,17 +7,17 @@
  <img src="assets/screenshots/home.jfif" width="200"/>
   <img src="assets/screenshots/home1.jfif" width="200"/>
   <img src="assets/screenshots/live_stream.jfif" width="200"/>
+  <img src="assets/screenshots/shear.jfif" width="200"/>
 </p>
 <p float="left">
  <img src="assets/screenshots/lubrary.jfif" width="200"/>
   <img src="assets/screenshots/library1.jfif" width="200"/>
   <img src="assets/screenshots/favorites.jfif" width="200"/>
+ <img src="assets/screenshots/rating.jfif" width="200"/>
 </p>
 <p float="left">
  <img src="assets/screenshots/profile.jfif" width="200"/>
   <img src="assets/screenshots/profile1.jfif" width="200"/>
-  <img src="assets/screenshots/shear.jfif" width="200"/>
- <img src="assets/screenshots/rating.jfif" width="200"/>
 </p>
 
 🎬 Movie App UI – Flutter
