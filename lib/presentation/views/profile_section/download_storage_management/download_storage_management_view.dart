@@ -65,9 +65,9 @@ class _DownloadStorageManagementViewState
                       children: [
                         CircularPercentIndicator(
                           radius: 60.0,
-                          lineWidth: 5.0,
+                          lineWidth: 15.0,
                           percent: 1.0,
-                          center: Text("100%"),
+                          center: Text("100%",style: TextStyle(color: Colors.white,fontSize: 30.sp),),
                           progressColor: AppColors.primary,
                         ),
 

@@ -47,7 +47,7 @@ class _HomeViewState extends State<HomeView> {
                     itemCount: 6,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      return ImageContainer(image: AssetsPath.homeHeader,borderRadius: 6.r,);
+                      return ImageContainer(image: "assets/images/home/first_home_image2.png",borderRadius: 6.r,);
                     },
                   ),
                 ),
@@ -67,7 +67,7 @@ class _HomeViewState extends State<HomeView> {
                     CustomListViewWidget(
                       textView: "",
                       titleText: 'Streamly Original',
-                      image: AssetsPath.homeHeader,
+                      image: "assets/images/home/social_sharing_image.png",
                       text: "Hip Hop Road\nRedemption",),
                     CustomListViewWidget(
                       sizeBoxHeight: 128.h,
@@ -78,7 +78,7 @@ class _HomeViewState extends State<HomeView> {
                       text: "Hip Hop Road\nRedemption",),
                     CustomListViewWidget(
                       titleText: 'Popular Movies',
-                      image: AssetsPath.homeHeader,
+                      image: "assets/images/home/stream_original2.png",
                       text: "Hip Hop Road\nRedemption",),
                     CustomListViewWidget(
                       titleText: 'Popular Drama',

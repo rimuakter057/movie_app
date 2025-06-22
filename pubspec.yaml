@@ -67,6 +67,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/home/
+    - assets/screenshots/
     - assets/images/home/icons/
     - assets/images/live_stream/
     - assets/images/live_stream/icons/

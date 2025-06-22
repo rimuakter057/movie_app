@@ -136,21 +136,24 @@ class _FavoritesListViewState extends State<FavoritesListView> {
                             shrinkWrap: true,
                             itemBuilder: (context, index) {
                               return  FittedBox(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    ImageContainer(
-                                      height:248.h ,
-                                      width: 172.5.w,
-                                      image: AssetsPath.liveImage1,
-                                    ),
-                                    SizedBox(height: 8.h,),
-                                    ProfileRowWidget(
-                                      image: AssetsPath.liveImage1,
-                                      title: "profile name",
-                                      subtitle: "profileSubTitle",
-                                    ),
-                                  ],
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      ImageContainer(
+                                        height:248.h ,
+                                        width: 172.5.w,
+                                        image: AssetsPath.liveImage1,
+                                      ),
+                                      SizedBox(height: 8.h,),
+                                      ProfileRowWidget(
+                                        image: AssetsPath.liveImage1,
+                                        title: "profile name",
+                                        subtitle: "profileSubTitle",
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               );
                             },

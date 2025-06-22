@@ -42,24 +42,27 @@ final int ?itemCount;
             itemCount:itemCount?? 10,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ImageContainer(
-                    width:width?? 172.5.w,
-                    height:height?? 224.h,
-                    image: image,
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ImageContainer(
+                      width:width?? 172.5.w,
+                      height:height?? 224.h,
+                      image: image,
 
-                  ),
-                  gapSm,
-                  Flexible(
-                    child: Text(
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        text,style: AppTextStyle.bodyMediumStyle),
-                  )
-                ],
+                    ),
+                    gapSm,
+                    Flexible(
+                      child: Text(
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          text,style: AppTextStyle.bodyMediumStyle),
+                    )
+                  ],
+                ),
               );
             },
           ),

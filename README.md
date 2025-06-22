@@ -1,16 +1,38 @@
 # movie_app
 
-A new Flutter project.
 
-## Getting Started
+## 🖼 App Screenshots
 
-This project is a starting point for a Flutter application.
+<p float="left">
+ <img src="assets/screenshots/home.jfif" width="200"/>
+  <img src="assets/screenshots/home1.jfif" width="200"/>
+  <img src="assets/screenshots/live_stream.jfif" width="200"/>
+</p>
+<p float="left">
+ <img src="assets/screenshots/lubrary.jfif" width="200"/>
+  <img src="assets/screenshots/library1.jfif" width="200"/>
+  <img src="assets/screenshots/favorites.jfif" width="200"/>
+</p>
+<p float="left">
+ <img src="assets/screenshots/profile.jfif" width="200"/>
+  <img src="assets/screenshots/profile1.jfif" width="200"/>
+  <img src="assets/screenshots/shear.jfif" width="200"/>
+ <img src="assets/screenshots/rating.jfif" width="200"/>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+🎬 Movie App UI – Flutter
+A beautifully crafted responsive Movie App UI built using Flutter, focusing on clean design and smooth user experience across all devices.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🔁 Responsive Design – Adapts perfectly to all screen sizes (phones & tablets)
+
+🎨 Modern UI Elements – Stylish layout with custom fonts and ratings
+
+📊 Interactive Components – Progress indicators, like animations, and star ratings
+
+🔄 Smooth Navigation – Fast, fluid transitions between screens
+
+🔔 Smart Icons – Notification badges for real-time alerts
+
+❤️ Like Animation – Floating hearts enhance user engagement
+
