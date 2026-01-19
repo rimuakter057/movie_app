@@ -46,6 +46,10 @@ class AssetsPath{
   ///live stream section
   //images
   static const String liveImage1="$baseUrl/live_stream/live_image_1.png";
+  static const String liveImage2="$baseUrl/live_stream/live_image_2.png";
+  static const String liveImage3="$baseUrl/live_stream/live_image_3.png";
+  static const String liveImage4="$baseUrl/live_stream/live_image_4.png";
+
 //icons
   static const String eyeIcon="$baseUrl/live_stream/icons/eye_icon.png";
 

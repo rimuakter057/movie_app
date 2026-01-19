@@ -12,8 +12,8 @@ class HeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 420.h,
-      width: 392.w,
+      height: 300.h,
+      width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(image: AssetImage(AssetsPath.socialSharingImage),fit: BoxFit.fill,
         ),

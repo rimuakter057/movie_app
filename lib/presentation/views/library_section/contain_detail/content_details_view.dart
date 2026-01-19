@@ -37,7 +37,7 @@ class _ContentDetailsViewState extends State<ContentDetailsView> {
           children: [
             ///header container
             HeaderContainer(),
-            SizedBox(height: 24.h),
+            SizedBox(height: 12.h),
             SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),

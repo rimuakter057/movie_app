@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/core/utils/app_colors.dart';
+import 'package:movie_app/presentation/views/live_stream_section/data/list/live_data_list.dart';
 import 'package:movie_app/presentation/views/live_stream_section/live_stream_three/widgets/live_video_item_widget.dart';
 
 import 'package:movie_app/presentation/widgets/custom_container.dart';
@@ -77,27 +78,28 @@ class _LiveStreamThreeViewState extends State<LiveStreamThreeView> {
                       ),
                       gap,
                       GridView.builder(
-                        itemCount: 20,
+                        itemCount: liveDataList.length,
                           scrollDirection: Axis.vertical,
                           shrinkWrap: true,
                           physics: BouncingScrollPhysics(),
                           gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
-                              mainAxisSpacing:20.h,
-                           crossAxisSpacing: 4.w,
+                              mainAxisSpacing:8.h,
+                           crossAxisSpacing: 8.w,
+                            childAspectRatio: 0.80,
+
                           ) ,
                           itemBuilder: (context,index){
+                          final liveList=liveDataList[index];
                             return InkWell(
                               onTap: (){
                              Get.to(LiveShortsView());
                               },
-                              child: FittedBox(
-                                child: GridLiveVideoItemWidget(
-                                  image:AssetsPath.liveImage1,
-                                  countSee: '1M',
-                                  profileTitle: 'Bradley Lawlor',
-                                  profileSubTitle: '10k Followers',
-                                ),
+                              child: GridLiveVideoItemWidget(
+                                image:liveList['liveImage']??AssetsPath.liveImage1,
+                                countSee: '1M',
+                                profileTitle: liveList['name']??"Rusha",
+                                profileSubTitle: liveList['followers']??"00 Flower",
                               ),
                             );
                           }),

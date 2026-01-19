@@ -26,7 +26,7 @@ class GridLiveVideoItemWidget extends StatelessWidget {
       children: [
         //live video show here
         LiveVideoWidget(
-          image: AssetsPath.liveImage1,
+          image: image,
           title1: countSee,
           title2: 'live',
         ),
