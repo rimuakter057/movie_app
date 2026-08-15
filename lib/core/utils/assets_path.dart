@@ -3,7 +3,7 @@ class AssetsPath{
   static const String baseUrl = 'assets/images';
   ///home section
   //images
-  static const String homeHeader="$baseUrl/home/home_header_image.png";
+  static const String homeHeader="$baseUrl/home/stream_original1.png";
   static const String textImage="$baseUrl/home/text_image.png";
   static const String tvImage1="$baseUrl/home/tv_show_image1.png";
   static const String socialSharingImage="$baseUrl/home/social_sharing_image.png";

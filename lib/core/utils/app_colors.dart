@@ -31,14 +31,24 @@ class AppColors {
   static const Color primaryShade = Color(0x26AD59F3);
   static const Color primary15 = Color(0x407A24BC);
   static const Color primaryShade1 = Color(0xE67A24BC);
-   static const Color primaryShade2 = Color(0x997A24BC);
+  static const Color primaryShade2 = Color(0x997A24BC);
 
   static const Color secondaryText = Color(0x99FFFFFF); // white with 60% opacity
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
   static const Color black30 = Color(0x4D000000);
   static const Color red = Color(0xFFFB4A59);
-  ///home section
+
+  /// Dark Cinema Theme Colors
+  static const Color darkBg = Color(0xFF0D0B14);
+  static const Color cardDark = Color(0xFF161224);
+  static const Color surfaceGlass = Color(0x1FFFFFFF);
+  static const Color glassBorder = Color(0x2BFFFFFF);
+  static const Color ratingStar = Color(0xFFFFC107);
+  static const Color accentNeon = Color(0xFFB14EFF);
+  static const Color greenLive = Color(0xFF00E676);
+
+  /// Home section
   static const searchBackground = Color(0x66000000); // black with 40% opacity
   static const micBackground = Color(0x0D000000);
 }

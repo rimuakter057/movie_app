@@ -10,6 +10,7 @@ import '../views/home_section/social_sharing/social_shearing_view.dart';
 import '../views/live_stream_section/live_stream_three/live_stream_three_view.dart';
 import '../views/practice/home_item_view.dart';
 import '../views/profile_section/download_storage_management/download_storage_management_view.dart';
+import '../views/profile_section/subscription_plan_view.dart';
 
 
 class Routes {
@@ -49,7 +50,10 @@ class Routes {
     GetPage(
       name: ContentDetailsView.routeName,
       page: () => ContentDetailsView(),
-
+    ),
+    GetPage(
+      name: SubscriptionPlanView.routeName,
+      page: () => const SubscriptionPlanView(),
     ),
   ];
 }

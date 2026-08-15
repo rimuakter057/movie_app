@@ -23,7 +23,7 @@ class MovieApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Movie App',
+          title: 'RiStream',
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.black,
           ),
